@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/api/goals/";
+const API_URL = "https://mernapp-achievex.onrender.com/api/goals/";
 
 //create new goals
 const createGoal = async (goalData, token) => {
