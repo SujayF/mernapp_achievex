@@ -6,6 +6,12 @@ const port = process.env.PORT || 5100;
 const {MongoClient} = require('mongodb')
 const {errorHandler} = require('./middleware/errorMiddleware');
 const connectDB = require('./config/db');
+const cors = require('cors');
+app.use(
+  cors({
+    origin:"*"
+  })
+)
 
 
 dotenv.config()
