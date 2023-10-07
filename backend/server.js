@@ -7,11 +7,7 @@ const {MongoClient} = require('mongodb')
 const {errorHandler} = require('./middleware/errorMiddleware');
 const connectDB = require('./config/db');
 const cors = require('cors');
-app.use(
-  cors({
-    origin:"*"
-  })
-)
+
 
 
 dotenv.config()
@@ -23,7 +19,11 @@ connectDB();
 const app = express();
 
 
-
+app.use(
+  cors({
+    origin:"*"
+  })
+)
 
 
 app.use(express.json())
